@@ -38,7 +38,6 @@ function pauseSong() {
 }
 
 function playSong() {
-  const isPlaying = musicContainer.classList.contains("play");
   console.log("current song index " + songIdx);
   musicContainer.classList.add("play");
   playBtn.querySelector("i.fas").classList.remove("fa-play");
