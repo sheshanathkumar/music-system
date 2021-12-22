@@ -3,7 +3,7 @@ A web application play song
 
 ## How to use it
 ----------------
-1. Go to Music folder and past your songs
+1. Go to Music folder and paste your songs
 2. Open cmd (not powershell) in the same folder and run this script (windows user)
 
 > for %a in (*) do @echo '%~nxa',
@@ -14,4 +14,3 @@ A web application play song
 6. clear all the value inside this array
 7. paste output copied at step 4
 8. save and run index.html
-
