@@ -10,7 +10,7 @@ A web application play song
 
 3. it will show all the file names in your music directory
 4. copy the output of this script 
-5. opne script.js -> go to  array name const songs (line number 14)
+5. Open script.js -> go to  array name const songs (line number 14)
 6. clear all the value inside this array
 7. paste output copied at step 4
 8. save and run index.html
