@@ -10,20 +10,26 @@ const progressContainer = document.querySelector(".progress-container");
 const songDuration = document.querySelector("#duration");
 
 // Song title
+// Update your song title here
 const songs = [
-  "apple_tune.mp3",
+  "09hey_shambhu_baba_mere_bhole_.mp3",
+  "Aisi Laagi Lagan Meera Ho Gai Magan-Anup Jalota--Raag.Me--.mp3",
+  "ganga-kinare-darbaar-hai-(Songsify.Com).mp3",
+  "Hey_Bhole_Shankar.mp3",
   "Hey-Ram.mp3",
-  "nokia_tune_k.mp3",
-  "sony_tune.mp3",
+  "Jag Mein Sunder Hain Do Naam-Anup Jalota--Raag.Me--_2.mp3",
+  "Jai Jai Hanuman Gusain-Hariharan--Raag.Me--.mp3",
+  "jai-maa-dakshinesuwari-kaali-(Songsify.Com).mp3",
+  "Maa Ka Dil-Sonu Nigam--Raag.Me--.mp3",
 ];
 
 // Keep track of songs
+
 let songIdx = 0;
 loadSong(songs[songIdx]);
 
 function loadSong(song) {
   title.innerText = song;
-  console.log("calling load song " + title.innerText);
   audio.src = `music/${song}`;
   // cover.src = `asset/wheel.jpg`;
 }
@@ -43,6 +49,7 @@ function playSong() {
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
   audio.play();
+  playBtn.style.display = "none";
 }
 
 function prevSong() {
@@ -77,6 +84,9 @@ function updateProgress(e) {
   songDuration.innerText = `${stdCurrTime} / ${stdDur}`;
   console.log(songDuration.innerText);
   progress.style.width = `${progPercent}%`;
+  if (progPercent === 100) {
+    nextSong();
+  }
 }
 
 function changeToTime(time) {
@@ -99,7 +109,8 @@ playBtn.addEventListener("click", () => {
 });
 
 // change song event
-prevBtn.addEventListener("click", prevSong);
-nextBtn.addEventListener("click", nextSong);
+// prevBtn.addEventListener("click", prevSong);
+// nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener("timeupdate", updateProgress);
+audio.addEventListener("onload", playSong);
