@@ -12,15 +12,12 @@ const songDuration = document.querySelector("#duration");
 // Song title
 // Update your song title here
 const songs = [
-  "09hey_shambhu_baba_mere_bhole_.mp3",
-  "Aisi Laagi Lagan Meera Ho Gai Magan-Anup Jalota--Raag.Me--.mp3",
-  "ganga-kinare-darbaar-hai-(Songsify.Com).mp3",
-  "Hey_Bhole_Shankar.mp3",
-  "Hey-Ram.mp3",
-  "Jag Mein Sunder Hain Do Naam-Anup Jalota--Raag.Me--_2.mp3",
-  "Jai Jai Hanuman Gusain-Hariharan--Raag.Me--.mp3",
-  "jai-maa-dakshinesuwari-kaali-(Songsify.Com).mp3",
-  "Maa Ka Dil-Sonu Nigam--Raag.Me--.mp3",
+  "Cradles_Medium.mp3",
+  "Harry_potter_Indian.mp3",
+  "Humorously Yours.mp3",
+  "iphone 6 original.mp3",
+  "Mission Impossible.mp3",
+  "Nokia Airy Original.mp3",
 ];
 
 // Keep track of songs
