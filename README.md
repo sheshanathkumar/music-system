@@ -4,7 +4,7 @@ A web application play song
 ## How to use it
 ----------------
 1. Go to Music folder and past your songs
-2. Open cmd (not powershell) in the same folder and run this script (window user)
+2. Open cmd (not powershell) in the same folder and run this script (windows user)
 
 > for %a in (*) do @echo '%~nxa',
 
