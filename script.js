@@ -8,6 +8,8 @@ const cover = document.querySelector("#cover");
 const progress = document.querySelector(".progress");
 const progressContainer = document.querySelector(".progress-container");
 const songDuration = document.querySelector("#duration");
+const songList = document.querySelector("#songs");
+const songPanel = document.querySelector(".song-list");
 
 // Song title
 // Update your song title here
@@ -21,9 +23,15 @@ const songs = [
 ];
 
 // Keep track of songs
+function loadPlaylist(songs) {
+  songs.forEach((x) => {
+    let s = document.createElement("li");
+    s.innerText = x;
+    songList.appendChild(s);
+  });
+}
 
 let songIdx = 0;
-loadSong(songs[songIdx]);
 
 function loadSong(song) {
   title.innerText = song;
@@ -46,7 +54,6 @@ function playSong() {
   playBtn.querySelector("i.fas").classList.remove("fa-play");
   playBtn.querySelector("i.fas").classList.add("fa-pause");
   audio.play();
-  playBtn.style.display = "none";
 }
 
 function prevSong() {
@@ -106,8 +113,10 @@ playBtn.addEventListener("click", () => {
 });
 
 // change song event
-// prevBtn.addEventListener("click", prevSong);
-// nextBtn.addEventListener("click", nextSong);
+loadPlaylist(songs);
+loadSong(songs[songIdx]);
+prevBtn.addEventListener("click", prevSong);
+nextBtn.addEventListener("click", nextSong);
 
 audio.addEventListener("timeupdate", updateProgress);
 audio.addEventListener("onload", playSong);
